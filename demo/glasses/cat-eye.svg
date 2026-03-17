@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 130">
+  <!-- Left lens (cat-eye) -->
+  <path d="M20 75 Q22 30 105 22 Q165 18 178 70 Q165 90 105 92 Q45 90 20 75 Z"
+        fill="none" stroke="#2c2c54" stroke-width="8" stroke-linejoin="round"/>
+  <!-- Right lens (cat-eye) -->
+  <path d="M400 75 Q398 30 295 22 Q235 18 222 70 Q235 90 295 92 Q355 90 400 75 Z"
+        fill="none" stroke="#2c2c54" stroke-width="8" stroke-linejoin="round"/>
+  <!-- Bridge -->
+  <path d="M178 58 Q200 46 222 58" fill="none" stroke="#2c2c54" stroke-width="7" stroke-linecap="round"/>
+  <!-- Left temple -->
+  <path d="M20 75 Q6 78 2 88" fill="none" stroke="#2c2c54" stroke-width="7" stroke-linecap="round"/>
+  <!-- Right temple -->
+  <path d="M400 75 Q414 78 418 88" fill="none" stroke="#2c2c54" stroke-width="7" stroke-linecap="round"/>
+</svg>

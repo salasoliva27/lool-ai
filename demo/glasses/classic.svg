@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120">
+  <!-- Left lens -->
+  <ellipse cx="105" cy="60" rx="85" ry="50" fill="none" stroke="#1a1a1a" stroke-width="8"/>
+  <!-- Right lens -->
+  <ellipse cx="295" cy="60" rx="85" ry="50" fill="none" stroke="#1a1a1a" stroke-width="8"/>
+  <!-- Bridge -->
+  <path d="M190 60 Q200 48 210 60" fill="none" stroke="#1a1a1a" stroke-width="7" stroke-linecap="round"/>
+  <!-- Left temple -->
+  <line x1="20" y1="38" x2="20" y2="38" stroke="#1a1a1a" stroke-width="7" stroke-linecap="round"/>
+  <path d="M20 55 Q10 60 4 68" fill="none" stroke="#1a1a1a" stroke-width="7" stroke-linecap="round"/>
+  <!-- Right temple -->
+  <path d="M380 55 Q390 60 396 68" fill="none" stroke="#1a1a1a" stroke-width="7" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Óptica Demo — lool.ai widget</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #f9f6f2;
+      color: #1a1a1a;
+    }
+
+    header {
+      background: #fff;
+      border-bottom: 1px solid #e8e2da;
+      padding: 18px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    header h1 { font-size: 20px; font-weight: 700; letter-spacing: -.5px; }
+    header span { font-size: 13px; color: #888; }
+
+    .catalog {
+      max-width: 960px;
+      margin: 48px auto;
+      padding: 0 24px;
+    }
+
+    .catalog h2 {
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 32px;
+      color: #333;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 1px 4px rgba(0,0,0,.07);
+    }
+
+    .card-img {
+      background: #f0ece6;
+      padding: 36px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card-img img {
+      width: 100%;
+      max-width: 240px;
+      height: 80px;
+      object-fit: contain;
+    }
+
+    .card-body {
+      padding: 18px 20px 20px;
+    }
+
+    .card-name {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .card-price {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 16px;
+    }
+
+    .card-actions {
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn-tryon {
+      flex: 1;
+      padding: 10px 0;
+      background: #1a1a1a;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background .15s;
+    }
+
+    .btn-tryon:hover { background: #333; }
+
+    .btn-buy {
+      flex: 1;
+      padding: 10px 0;
+      background: transparent;
+      color: #1a1a1a;
+      border: 1.5px solid #ddd;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      background: #e8f4e8;
+      color: #2a7a2a;
+      padding: 2px 8px;
+      border-radius: 20px;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 24px;
+      font-size: 12px;
+      color: #bbb;
+    }
+
+    footer a { color: #999; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Óptica Condesa</h1>
+  <span>Colección 2026</span>
+</header>
+
+<div class="catalog">
+  <h2>Armazones</h2>
+  <div class="grid">
+
+    <div class="card">
+      <div class="card-img">
+        <img src="glasses/classic.svg" alt="Clásico Negro">
+      </div>
+      <div class="card-body">
+        <span class="badge">Popular</span>
+        <div class="card-name">Clásico Negro</div>
+        <div class="card-price">$2,400 MXN</div>
+        <div class="card-actions">
+          <button class="btn-tryon" data-lool-try-on="glasses/classic.svg">
+            Probar
+          </button>
+          <button class="btn-buy">Comprar</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-img">
+        <img src="glasses/round.svg" alt="Redondo Carey">
+      </div>
+      <div class="card-body">
+        <div class="card-name">Redondo Carey</div>
+        <div class="card-price">$2,800 MXN</div>
+        <div class="card-actions">
+          <button class="btn-tryon" data-lool-try-on="glasses/round.svg">
+            Probar
+          </button>
+          <button class="btn-buy">Comprar</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-img">
+        <img src="glasses/cat-eye.svg" alt="Cat-Eye Azul">
+      </div>
+      <div class="card-body">
+        <span class="badge">Nuevo</span>
+        <div class="card-name">Cat-Eye Azul</div>
+        <div class="card-price">$3,100 MXN</div>
+        <div class="card-actions">
+          <button class="btn-tryon" data-lool-try-on="glasses/cat-eye.svg">
+            Probar
+          </button>
+          <button class="btn-buy">Comprar</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer>
+  Prueba virtual con tecnología <a href="#">lool.ai</a> — la cámara corre en tu navegador, no se guarda ninguna imagen.
+</footer>
+
+<!-- lool.ai widget — one script tag, that's it -->
+<script src="../src/widget.js"></script>
+
+</body>
+</html>
