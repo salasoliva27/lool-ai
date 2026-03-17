@@ -89,7 +89,7 @@
     var aspect = glassesImg.naturalHeight / glassesImg.naturalWidth;
     var height = width * aspect;
     var cx     = (eyeL.x + eyeR.x) / 2;
-    var cy     = (eyeL.y + eyeR.y) / 2 - height * 0.08;
+    var cy     = (eyeL.y + eyeR.y) / 2;
 
     ctx.save();
     ctx.translate(cx, cy);
