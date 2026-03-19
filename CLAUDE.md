@@ -56,23 +56,38 @@ All keys are in `salasoliva27/dotfiles/.env` and auto-load into every Codespace.
 
 ---
 
-## HOW TO START EVERY SESSION
+## SESSION BEHAVIOR — READ THIS FIRST
 
-1. Call `recall("recent lool-ai work and decisions", workspace="lool-ai")` — load memory
-2. Call `recall("venture-os portfolio context")` — load cross-project context
-3. Read this file and understand current build state
-4. Ask: what do you want to work on?
+**This workspace is: `lool-ai`**
 
-## END OF EVERY SESSION
+Every time a chat opens — regardless of what the user says first — you MUST do the following before composing any response:
 
+### AUTOMATIC SESSION START (do this before responding to anything)
+1. Call `recall("recent lool-ai work and decisions")` — gets this project's memory
+2. Call `recall("venture-os portfolio context and other projects")` — loads cross-project context
+3. Read this CLAUDE.md build status section — understand current state
+4. You now have full context. Respond to whatever the user asked.
+
+### WHEN THE USER ASKS "where did we leave off" / "what's the status" / "catch me up"
+Summarize from the recall() results:
+- What was last built or decided in lool-ai
+- Current build status (what works, what's next)
+- Any open decisions (e.g. pricing model)
+- Context from venture-os if relevant
+
+### END OF EVERY SESSION
+Before the conversation ends, call `remember()` — even if the user doesn't ask:
 ```
 remember(
-  content="[what was built, decisions made, what's next]",
+  content="[summary: what was built, decisions made, open questions, next steps]",
   workspace="lool-ai",
   project="lool-ai",
   type="session"
 )
 ```
+For build decisions or learnings, store separately with type="decision" or type="learning".
+
+**Never skip the end-of-session remember(). It is how the next chat will know what happened here.**
 
 ---
 
