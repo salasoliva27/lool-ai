@@ -54,6 +54,20 @@ Which tools this project needs → [`TOOLS.md`](./TOOLS.md)
 
 ---
 
+## CONTEXT MANAGEMENT — MANDATORY
+
+**Never ask Jano to open a new conversation. Always use `/compact` instead.**
+
+When context reaches ~85% (system warning appears), STOP what you're doing and:
+1. Save session memory via `mcp__janus-memory__remember` (or Write to memory files if MCP unavailable) — do this BEFORE compacting
+2. Ask: *"Context is getting full. Should I `/compact` now and keep going in this same conversation?"*
+3. Wait for confirmation — then run `/compact`
+4. After compacting, read memory before resuming any work
+
+This applies in ALL repos and ALL Codespaces. The goal is zero conversation restarts — everything happens in one continuous session per working block.
+
+---
+
 ## SESSION BEHAVIOR — READ THIS FIRST
 
 **This workspace is: `lool-ai`**
